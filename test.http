@@ -1,12 +1,9 @@
-PUT http://localhost:5000/data/entries HTTP/1.1
+POST http://localhost:5000/auth/login HTTP/1.1
 content-type: application/json
 
 {
-    "apiKey": "615fd743704f3342e749ac4b",
-    "entry": {
-        "name" : "someradbom",
-        "email" : "lmaolmao",
-        "message" : "whaaaat"
-    }
+    "uid" : "3434343"
+
+
 }
 
