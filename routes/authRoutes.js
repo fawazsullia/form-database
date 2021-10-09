@@ -45,8 +45,10 @@ router.post('/login', async (req,res)=> {
 try{
 
 const details = await UserModel.findOne({uid : req.body.uid});
-await res.status(200).json({ apiKey : details._id }).end();
-
+if(details){
+await res.status(200).json(details).end();
+}
+else { res.status(404).json({status : false, message : "No such user found"})  }
 }
 catch(err){
 
