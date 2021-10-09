@@ -11,7 +11,7 @@ You can make use of the endpoint mentioned below and send a PUT request for ever
 
 PUT request using fetch
 
-`
+```
 fetch("formdatabase.herokuapp.com/data/entries", {
     method : 'PUT',
     headers : {
@@ -23,7 +23,7 @@ fetch("formdatabase.herokuapp.com/data/entries", {
     })
 })
 
-`
+```
 
 ### Important links and how to start
 
