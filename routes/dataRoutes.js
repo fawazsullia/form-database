@@ -11,7 +11,7 @@ const apiKey = req.url.replace("/entries/", "").trim()
 
 try{
 
-const data = await UserModel.findOne({ _id : apiKey  })
+const data = await UserModel.findOne({ apiKey : apiKey  })
 await res.status(200).json(data).end()
 }
 catch(err){

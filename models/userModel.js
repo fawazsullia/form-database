@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
 
-    _id : mongoose.Types.ObjectId,
+    apiKey : mongoose.Types.ObjectId,
 email : String,
 uid : String,
 formFills : []

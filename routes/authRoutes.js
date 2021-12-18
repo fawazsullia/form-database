@@ -16,14 +16,15 @@ else {let _id = mongoose.Types.ObjectId();
 
     const user = new UserModel({
 
-        _id : _id,
+        apiKey : _id,
         email : req.body.email,
-        uid : req.body.uid
+        uid : req.body.uid,
+        formFills : [{}]
         
         })   
 
     await user.save();
-    await res.status(200).json({ apiKey : _id   }).end()    
+    await res.status(200).json({ formFills :[{}],  apiKey : _id, email : req.body.email   }).end()    
 }
     
 }
