@@ -32,10 +32,10 @@ router.put('/entries', async (req, res)=>{
 const { apiKey , entry  } = req.body;
 if(apiKey && entry){
 try{
-const details =  await UserModel.findOneAndUpdate({ _id : apiKey }, {$push : { formFills : { $each : [entry], $position : 0} }});
+const details =  await UserModel.findOneAndUpdate({ apiKey : apiKey }, {$push : { formFills : { $each : [entry], $position : 0} }});
 console.log(details)   
 
-await sendEmail(details.email, entry)
+//await sendEmail(details.email, entry)
     await res.status(200).json({status : true, message : "Updated"}).end();
 }
 catch(err){
